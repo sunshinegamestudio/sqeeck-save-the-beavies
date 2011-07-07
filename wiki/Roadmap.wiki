@@ -3,7 +3,7 @@
 
 = Introduction =
 
-Add your content here.
+This is the roadmap for Sqeeck: Save the Beavies.
 
 
 = Details =
@@ -12,3 +12,5 @@ Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
+
+*Version 0.1:*
