@@ -1,5 +1,5 @@
 #labels Phase-Requirements
-#This is the roadmap for Sqeeck: Save the Beavies
+#This is the roadmap for Sqeeck: Save the Beavies.
 
 = Introduction =
 
