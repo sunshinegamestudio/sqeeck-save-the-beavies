@@ -13,4 +13,33 @@ Add your content here.  Format your content with:
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
 
-*Version 0.1:*
+V 0.1:
+  * Create community project (GoogleCode)
+  * New studio name / email address
+  * Repository
+  * Wiki
+     * Roadmap
+  * Issue tracker
+  * Releases
+
+V 0.2:
+  * Implement player movement
+  * Place assets (levels/other) in jar file (assets folder)
+  * Define level format
+  * Start/finish point
+  * Enemy spawn points
+  * Skybox
+  * Terrain Editor -> Create Skybox)
+
+V 0.3:
+  * Create simple enemy (NPC)
+  * Spawn player/enemy on map points
+  * React on finish point
+
+V 0.4:
+  * Load/save progress
+
+V 0.5:
+  * Swing with tail
+
+The content of the releases are subject to change and can be changed without notice.
