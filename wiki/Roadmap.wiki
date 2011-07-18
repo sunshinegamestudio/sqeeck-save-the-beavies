@@ -13,7 +13,7 @@ Add your content here.  Format your content with:
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
 
-V 0.1:
+V 0.1.0 (done):
   * Create community project (GoogleCode)
   * New studio name / email address
   * Repository
@@ -21,6 +21,11 @@ V 0.1:
      * Roadmap
   * Issue tracker
   * Releases
+
+V 0.1.1:
+  * Fix the remaining issues
+     * No player movement with 2 keys pressed (ID: 1)
+     * The gamestate switching doesn't work correct (ID: 2)
 
 V 0.2:
   * Implement player movement
