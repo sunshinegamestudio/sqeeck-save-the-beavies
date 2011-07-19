@@ -19,6 +19,8 @@ Add your content here.  Format your content with:
   * Create community project (GoogleCode)
   * New studio name / email address
   * Repository
+     * Source code
+     * Tags
   * Wiki
      * Roadmap
   * Issue tracker
