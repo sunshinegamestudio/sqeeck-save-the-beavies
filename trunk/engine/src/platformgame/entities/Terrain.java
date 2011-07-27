@@ -41,7 +41,7 @@ public class Terrain extends Entity {
         //com.jme3.terrain
         //BufferGeomap
 
-        Node terrain = (Node) assetManager.loadModel("Scenes/Terrain_1.j3o");
+        Node terrain = (Node) assetManager.loadModel("Scenes/terrain_1.j3o");
 
         terrain.setLocalTranslation(new Vector3f(0,-1,10));
         terrain.updateGeometricState();
