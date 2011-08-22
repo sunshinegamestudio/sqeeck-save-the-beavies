@@ -34,6 +34,7 @@ Add your content here.  Format your content with:
 = V 0.2.x =
 
 *V 0.2:*
+  * Basic logging
   * Implement player movement
   * Place assets (levels/other) in jar file (assets folder)
   * Define level format
