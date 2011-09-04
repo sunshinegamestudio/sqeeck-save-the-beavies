@@ -87,6 +87,8 @@ public class SimpleEnemy extends Entity  {
     private CharacterPlayer player;
     private Node spatial;
     private CharacterControl characterControl;
+    private RigidBodyControl rigidBodyControl;
+
     private Vector3f walkDirection = new Vector3f(Vector3f.ZERO);
     private Vector3f viewDirection = new Vector3f(Vector3f.UNIT_Z);
     private Vector3f tempVec = new Vector3f();
@@ -99,10 +101,17 @@ public class SimpleEnemy extends Entity  {
 
         CapsuleCollisionShape capsule = new CapsuleCollisionShape(1.5f, 2f);
         characterControl = new CharacterControl(capsule, 0.01f);
+        //characterControl.setCollisionGroup(2);
+        rigidBodyControl = new RigidBodyControl(capsule, 0.01f);
+        rigidBodyControl.setKinematic(true);
+        rigidBodyControl.setCollisionGroup(2);
+        rigidBodyControl.addCollideWithGroup(2);
+
         //model = (Node) assetManager.loadModel("Models/Oto/Oto.mesh.xml");
         spatial = (Node) assetManager.loadModel("Models/simple_enemy_1/simple_enemy_1.mesh.j3o");
         spatial.setLocalScale(0.5f);
         spatial.addControl(characterControl);
+        spatial.addControl(rigidBodyControl);
         characterControl.setPhysicsLocation(new Vector3f(10, 4, -14));
         //characterControl.attachDebugShape(assetManager);
         getParent().attachChild(spatial);

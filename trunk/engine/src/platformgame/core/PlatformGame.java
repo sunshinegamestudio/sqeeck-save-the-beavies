@@ -31,6 +31,9 @@ import com.jme3.system.AppSettings;
 import com.jme3.system.JmeSystem;
 import com.jme3.system.Timer;
 
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import platformgame.appstates.MainMenuState;
 import platformgame.appstates.InGameMenuState;
 import platformgame.appstates.GameState;
@@ -47,6 +50,8 @@ public class PlatformGame extends Application {
 	private MainMenuState ms = null;
 	private InGameMenuState is = null;
         private BulletAppState bulletAppState = null;
+        private Logger logger = Logger.getLogger(PlatformGame.class.getName());
+        //private FileHandler fh = new FileHandler("mylog.txt");
 
         static PlatformGame thisApp;
 	
@@ -63,6 +68,11 @@ public class PlatformGame extends Application {
         return bulletAppState.getPhysicsSpace();
     }
 
+    public Logger getLogger()
+    {
+        return logger;
+    }
+    
     @Override
     public void start(){
         // set some default settings in-case
@@ -71,8 +81,13 @@ public class PlatformGame extends Application {
             setSettings(new AppSettings(true));
 
         // show settings dialog
-        if (!JmeSystem.showSettingsDialog(settings, false))
-        	return;
+        if (!JmeSystem.showSettingsDialog(settings, false)) {
+            getLogger().log(Level.SEVERE, "jME system initialisation error");
+            return;
+        }
+
+        //Collection<Caps> caps = renderer.getCaps();
+        //getLogger().log(Level.SEVERE, "Caps: {0}" + caps.toString());
 
         super.start();
     }

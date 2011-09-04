@@ -15,6 +15,14 @@ import com.jme3.bullet.control.RigidBodyControl;
  * @author Vortex
  */
 public class CharacterPlayerControl extends RigidBodyControl implements PhysicsTickListener, PhysicsCollisionListener   {
+    private PhysicsSpace physicsSpace;
+    
+    public CharacterPlayerControl(PhysicsSpace physicsSpace)    {
+        this.physicsSpace = physicsSpace;
+
+        //getPhysicsSpace().addTickListener(this);
+        //getPhysicsSpace().addCollisionListener(this);
+    }
     
     public void prePhysicsTick(PhysicsSpace space, float f){
       // apply state changes ...
