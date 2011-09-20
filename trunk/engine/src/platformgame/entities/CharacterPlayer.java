@@ -135,6 +135,7 @@ static final Quaternion ROTATE_LEFT = new Quaternion().fromAngleAxis(-FastMath.H
         //characterControl.attachDebugShape(assetManager);
         getParent().attachChild(spatial);
         getPhysicsSpace().add(characterControl);
+        getPhysicsSpace().add(rigidBodyControl);
 
         // Move to CharacterPlayerControl !!!!!!!!!!!!!!!!!!!!
         getPhysicsSpace().addTickListener(characterPlayerControl);

@@ -116,6 +116,7 @@ public class SimpleEnemy extends Entity  {
         //characterControl.attachDebugShape(assetManager);
         getParent().attachChild(spatial);
         getPhysicsSpace().add(characterControl);
+        getPhysicsSpace().add(rigidBodyControl);
     }
 
     public Node getNode()   {
