@@ -33,6 +33,7 @@ import com.jme3.bounding.BoundingBox;
 import com.jme3.bullet.PhysicsSpace;
 import com.jme3.bullet.collision.PhysicsCollisionEvent;
 import com.jme3.bullet.collision.PhysicsCollisionListener;
+import com.jme3.bullet.collision.PhysicsCollisionObject;
 import com.jme3.bullet.collision.shapes.BoxCollisionShape;
 import com.jme3.bullet.collision.shapes.CapsuleCollisionShape;
 import com.jme3.bullet.collision.shapes.SphereCollisionShape;
@@ -104,8 +105,8 @@ public class SimpleEnemy extends Entity  {
         //characterControl.setCollisionGroup(2);
         rigidBodyControl = new RigidBodyControl(capsule, 0.01f);
         rigidBodyControl.setKinematic(true);
-        rigidBodyControl.setCollisionGroup(2);
-        rigidBodyControl.addCollideWithGroup(2);
+        rigidBodyControl.setCollisionGroup(PhysicsCollisionObject.COLLISION_GROUP_02);
+        rigidBodyControl.addCollideWithGroup(PhysicsCollisionObject.COLLISION_GROUP_02);
 
         //model = (Node) assetManager.loadModel("Models/Oto/Oto.mesh.xml");
         spatial = (Node) assetManager.loadModel("Models/simple_enemy_1/simple_enemy_1.mesh.j3o");
