@@ -125,6 +125,7 @@ static final Quaternion ROTATE_LEFT = new Quaternion().fromAngleAxis(-FastMath.H
         rigidBodyControl.setKinematic(true);
         rigidBodyControl.setCollisionGroup(PhysicsCollisionObject.COLLISION_GROUP_02);
         rigidBodyControl.addCollideWithGroup(PhysicsCollisionObject.COLLISION_GROUP_02);
+        rigidBodyControl.removeCollideWithGroup(PhysicsCollisionObject.COLLISION_GROUP_01);
         
         //model = (Node) assetManager.loadModel("Models/Oto/Oto.mesh.xml");
         spatial = (Node) assetManager.loadModel("Models/player_1/player_1.mesh.j3o");

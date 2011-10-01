@@ -38,5 +38,13 @@ public class CharacterPlayerControl extends RigidBodyControl implements PhysicsT
                 //fpsText.setText("You hit the box!");
             }
         }
+
+        if ("+player_1-ogremesh".equals(event.getNodeA().getName()) && "simple_enemy_1-ogremesh".equals(event.getNodeB().getName()) || 
+                "simple_enemy_1-ogremesh".equals(event.getNodeA().getName()) && "+player_1-ogremesh".equals(event.getNodeB().getName()))
+        {
+            System.out.println("Collison: Player-SimpleEnemy");
+            //Place Player1 and SimpleEnemy1 back, so they are not colliding !!!!!!!!!!!!
+        }
+
     }
 }

@@ -107,6 +107,7 @@ public class SimpleEnemy extends Entity  {
         rigidBodyControl.setKinematic(true);
         rigidBodyControl.setCollisionGroup(PhysicsCollisionObject.COLLISION_GROUP_02);
         rigidBodyControl.addCollideWithGroup(PhysicsCollisionObject.COLLISION_GROUP_02);
+        rigidBodyControl.removeCollideWithGroup(PhysicsCollisionObject.COLLISION_GROUP_01);
 
         //model = (Node) assetManager.loadModel("Models/Oto/Oto.mesh.xml");
         spatial = (Node) assetManager.loadModel("Models/simple_enemy_1/simple_enemy_1.mesh.j3o");
@@ -154,7 +155,7 @@ public class SimpleEnemy extends Entity  {
         //TODO: setting spatial rotation to avoid tilting
         //spatial.lookAt(player.getNode().getLocalTranslation(), Vector3f.UNIT_Y);
 
-        System.out.println("WalkDirection: " + player.getControl().getPhysicsLocation());
-        System.out.println("Char-WalkDirection: " + player.getControl().getWalkDirection());
+        //System.out.println("WalkDirection: " + player.getControl().getPhysicsLocation());
+        //System.out.println("Char-WalkDirection: " + player.getControl().getWalkDirection());
     }
 }
