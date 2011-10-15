@@ -18,6 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 package platformgame.core;
 
+import java.io.IOException;
 import platformgame.core.statetasks.ChangeStateTask;
 import com.jme3.app.Application;
 import com.jme3.bullet.BulletAppState;
@@ -25,11 +26,14 @@ import com.jme3.bullet.BulletAppState.ThreadingType;
 import com.jme3.bullet.PhysicsSpace;
 import com.jme3.bullet.PhysicsSpace.BroadphaseType;
 import com.jme3.math.Vector3f;
+import com.jme3.renderer.Caps;
 import com.jme3.renderer.RenderManager;
 import com.jme3.renderer.ViewPort;
 import com.jme3.system.AppSettings;
 import com.jme3.system.JmeSystem;
 import com.jme3.system.Timer;
+import java.util.Collection;
+import java.util.logging.FileHandler;
 
 
 import java.util.logging.Level;
@@ -50,8 +54,8 @@ public class PlatformGame extends Application {
 	private MainMenuState ms = null;
 	private InGameMenuState is = null;
         private BulletAppState bulletAppState = null;
-        private Logger logger = Logger.getLogger(PlatformGame.class.getName());
-        //private FileHandler fh = new FileHandler("mylog.txt");
+        private Logger logger;
+        private FileHandler fh;
 
         static PlatformGame thisApp;
 	
@@ -75,6 +79,17 @@ public class PlatformGame extends Application {
     
     @Override
     public void start(){
+        logger = Logger.getLogger(PlatformGame.class.getName());
+        try {
+            fh = new FileHandler("PlatformGame.log");
+        } catch (IOException ex) {
+            Logger.getLogger(PlatformGame.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SecurityException ex) {
+            Logger.getLogger(PlatformGame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        //getLogger().addHandler(fh);
+        
         // set some default settings in-case
         // settings dialog is not shown
         if (settings == null)
@@ -86,8 +101,8 @@ public class PlatformGame extends Application {
             return;
         }
 
-        //Collection<Caps> caps = renderer.getCaps();
-        //getLogger().log(Level.SEVERE, "Caps: {0}" + caps.toString());
+        Collection<Caps> caps = renderer.getCaps();
+        getLogger().log(Level.SEVERE, "Caps: {0}" + caps.toString());
 
         super.start();
     }
