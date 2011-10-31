@@ -34,6 +34,9 @@ public class CharacterPlayerControl extends RigidBodyControl implements PhysicsT
     }
 
     public void collision(PhysicsCollisionEvent event) {
+        System.out.println("NodeA: " + event.getNodeA().getName());
+        System.out.println("NodeB: " + event.getNodeB().getName());
+        
         if ("Box".equals(event.getNodeA().getName()) || "Box".equals(event.getNodeB().getName())) {
             if ("bullet".equals(event.getNodeA().getName()) || "bullet".equals(event.getNodeB().getName())) {
                 //fpsText.setText("You hit the box!");
