@@ -2,14 +2,14 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2011-10-31T22:13:03</date>
-  <millis>1320095583728</millis>
-  <sequence>12</sequence>
+  <date>2011-11-06T22:45:23</date>
+  <millis>1320615923213</millis>
+  <sequence>0</sequence>
   <logger>platformgame.core.PlatformGame</logger>
   <level>SEVERE</level>
   <class>platformgame.core.PlatformGame</class>
-  <method>initialize</method>
-  <thread>11</thread>
-  <message>Start initialization</message>
+  <method>start</method>
+  <thread>10</thread>
+  <message>jME system initialisation error</message>
 </record>
 </log>
