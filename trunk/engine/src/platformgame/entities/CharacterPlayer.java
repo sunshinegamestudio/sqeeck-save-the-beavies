@@ -119,7 +119,7 @@ static final Quaternion ROTATE_LEFT = new Quaternion().fromAngleAxis(-FastMath.H
 
         CapsuleCollisionShape capsule = new CapsuleCollisionShape(1.5f, 2f);
         characterControl = new CharacterControl(capsule, 0.01f);
-        characterPlayerControl = new CharacterPlayerControl(getPhysicsSpace());
+        //characterPlayerControl = new CharacterPlayerControl(getPhysicsSpace());
         //characterControl.setCollisionGroup(2);
         rigidBodyControl = new RigidBodyControl(capsule, 0.01f);
         rigidBodyControl.setKinematic(true);
@@ -131,7 +131,7 @@ static final Quaternion ROTATE_LEFT = new Quaternion().fromAngleAxis(-FastMath.H
         spatial = (Node) assetManager.loadModel("Models/player_1/player_1.mesh.j3o");
         spatial.setLocalScale(0.5f);
         spatial.addControl(characterControl);
-        spatial.addControl(characterPlayerControl);
+        //spatial.addControl(characterPlayerControl);
         spatial.addControl(rigidBodyControl);
         characterControl.setPhysicsLocation(new Vector3f(10, 4, -10));
         //characterControl.attachDebugShape(assetManager);
@@ -140,8 +140,8 @@ static final Quaternion ROTATE_LEFT = new Quaternion().fromAngleAxis(-FastMath.H
         getPhysicsSpace().add(rigidBodyControl);
 
         // Move to CharacterPlayerControl !!!!!!!!!!!!!!!!!!!!
-        getPhysicsSpace().addTickListener(characterPlayerControl);
-        getPhysicsSpace().addCollisionListener(characterPlayerControl);
+        //getPhysicsSpace().addTickListener(characterPlayerControl);
+        //getPhysicsSpace().addCollisionListener(characterPlayerControl);
     }
 
     public Node getNode()   {
