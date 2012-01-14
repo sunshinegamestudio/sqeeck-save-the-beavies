@@ -5,6 +5,7 @@
 package platformgame.controls;
 
 import com.jme3.bullet.PhysicsSpace;
+import com.jme3.bullet.PhysicsTickListener;
 import com.jme3.bullet.collision.PhysicsCollisionEvent;
 import com.jme3.bullet.collision.PhysicsCollisionListener;
 import com.jme3.bullet.control.GhostControl;
@@ -14,15 +15,25 @@ import com.jme3.math.Vector3f;
  *
  * @author Vortex
  */
-public class LevelExitControl extends GhostControl implements PhysicsCollisionListener   {
+public class LevelExitControl extends GhostControl implements PhysicsTickListener, PhysicsCollisionListener   {
     private PhysicsSpace physicsSpace;
+    
+    private boolean onLevelExit = false;
     
     public void LevelExitControl(PhysicsSpace physicsSpace)    {
         this.physicsSpace = physicsSpace;
 
-        //getPhysicsSpace().addTickListener(this);
+        getPhysicsSpace().addTickListener(this);
         getPhysicsSpace().addCollisionListener(this);
     }
+
+    public void prePhysicsTick(PhysicsSpace space, float f) {
+        onLevelExit = false;
+    }
+    
+    public void physicsTick(PhysicsSpace space, float f){
+        throw new UnsupportedOperationException("Not supported yet.");
+    }    
     
     public void collision(PhysicsCollisionEvent event) {
         System.out.println("NodeA: " + event.getNodeA().getName());
@@ -49,6 +60,12 @@ public class LevelExitControl extends GhostControl implements PhysicsCollisionLi
             }
             
         }
+        
+        // By collision op LevelExit -> onLevelExit = false;
 
+    }
+    
+    boolean isOnLevelExit() {
+        return onLevelExit;
     }
 }
