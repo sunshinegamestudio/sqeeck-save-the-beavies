@@ -76,8 +76,8 @@ public class Level extends Entity {
 
         AbstractHeightMap heightmap = null;
         try {
-            heightmap = new ImageBasedHeightMap(ImageToAwt.convert(heightMapImage.getImage(), false, true, 0), 0.25f);
-            heightmap.load();
+            //heightmap = new ImageBasedHeightMap(ImageToAwt.convert(heightMapImage.getImage(), false, true, 0), 0.25f);
+            //heightmap.load();
 
         } catch (Exception e) {
             e.printStackTrace();
