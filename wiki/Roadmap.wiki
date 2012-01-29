@@ -27,6 +27,10 @@ Add your content here.  Format your content with:
   * Releases
 
 *V 0.1.1:*
+  * First attempt with Android support
+     * Basic build with no specific Android improvements
+
+*V 0.1.2:*
   * Fix the remaining issues
      * No player movement with 2 keys pressed (ID: 1)
      * The gamestate switching doesn't work correct (ID: 2)
