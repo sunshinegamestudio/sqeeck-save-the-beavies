@@ -27,7 +27,7 @@ Add your content here.  Format your content with:
   * Releases
 
 *V 0.1.1:*
-  * First attempt with Android support
+  * Basic Android support
      * Basic build with no specific Android improvements
 
 *V 0.1.2:*
