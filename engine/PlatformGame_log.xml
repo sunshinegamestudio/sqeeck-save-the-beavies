@@ -2,8 +2,8 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2012-01-29T00:11:35</date>
-  <millis>1327792295689</millis>
+  <date>2012-02-02T22:36:00</date>
+  <millis>1328218560847</millis>
   <sequence>12</sequence>
   <logger>platformgame.core.PlatformGame</logger>
   <level>SEVERE</level>
