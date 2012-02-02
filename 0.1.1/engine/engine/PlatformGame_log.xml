@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2011-11-15T22:43:58</date>
+  <millis>1321393438356</millis>
+  <sequence>12</sequence>
+  <logger>platformgame.core.PlatformGame</logger>
+  <level>SEVERE</level>
+  <class>platformgame.core.PlatformGame</class>
+  <method>initialize</method>
+  <thread>11</thread>
+  <message>Start initialization</message>
+</record>
+</log>
