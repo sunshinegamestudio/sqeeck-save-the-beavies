@@ -12,4 +12,7 @@
             </intent-filter>
         </activity>
     </application>
+    <uses-sdk minSdkVersion="8" 
+        targetSdkVersion="8"
+        maxSdkVersion="15" />
 </manifest> 
