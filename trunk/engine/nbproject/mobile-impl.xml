@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--mobile-impl.xml v0.16-->
+<!--mobile-impl.xml v0.17-->
 <project name="mobile-impl" basedir="..">
     <condition property="android-adb-name" value="${file.separator}platform-tools${file.separator}adb.exe" else="${file.separator}platform-tools${file.separator}adb">
         <os family="windows" />
@@ -50,7 +50,7 @@
         <echo>Adding libraries for android.</echo>
         <copy todir="mobile/libs" flatten="true">
             <path>
-                <pathelement path="${libs.jme3-android.classpath}"/>
+                <pathelement path="${libs.android-base.classpath}"/>
             </path>
         </copy>
         <antcall target="-unzip-bullet-libs"/>
