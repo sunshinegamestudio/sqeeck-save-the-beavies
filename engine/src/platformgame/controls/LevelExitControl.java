@@ -19,14 +19,11 @@ public class LevelExitControl extends GhostControl implements PhysicsTickListene
     private PhysicsSpace physicsSpace;
     
     private boolean onLevelExit = false;
-    
-    public void LevelExitControl(PhysicsSpace physicsSpace)    {
+
+    public LevelExitControl(PhysicsSpace physicsSpace) {
         this.physicsSpace = physicsSpace;
-
-        getPhysicsSpace().addTickListener(this);
-        getPhysicsSpace().addCollisionListener(this);
     }
-
+    
     public void prePhysicsTick(PhysicsSpace space, float f) {
         onLevelExit = false;
     }

@@ -61,6 +61,7 @@ public class GameState extends AbstractAppState implements ActionListener {
     private Sun sun;
     //private Sky sky;
     private Terrain terrain;
+    private StartingPoint startingPoint;
     //private Terrain_node terrain_node;
     //private CarPlayer player;
     //private SimpleCarPlayer player;
@@ -268,6 +269,7 @@ public class GameState extends AbstractAppState implements ActionListener {
         sun = new Sun(game.getAssetManager(), rootNode, game.getPhysicsSpace());
         //sky = new Sky(game.getAssetManager(), rootNode, game.getPhysicsSpace());
         terrain = new Terrain(game.getAssetManager(), rootNode, game.getPhysicsSpace());
+        startingPoint = new StartingPoint(game.getAssetManager(), rootNode, game.getPhysicsSpace(), game.getCamera());
         //terrain_node = new Terrain_node(game.getCamera(), game.getAssetManager(), rootNode, game.getPhysicsSpace());
         //player = new CarPlayer(game.getAssetManager(), rootNode, game.getPhysicsSpace());
         //player = new SimpleCarPlayer(game.getAssetManager(), rootNode, game.getPhysicsSpace());
