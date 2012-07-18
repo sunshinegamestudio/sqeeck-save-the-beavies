@@ -71,6 +71,8 @@ Add your content here.  Format your content with:
 *V 0.5:*
   * Swing with tail
 
+= V 0.6.x =
+
 *V 0.6.0:*
   * Basic menu's
 
