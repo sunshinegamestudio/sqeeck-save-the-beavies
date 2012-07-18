@@ -28,6 +28,10 @@ Add your content here.  Format your content with:
 
 = V 0.2.x =
 
+*V 0.2.0 (done):*
+  * Initial version
+     * Basic build
+
 *V 0.2.1 (done):*
   * Basic Android support
      * Basic build with no specific Android improvements
