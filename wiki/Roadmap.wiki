@@ -31,6 +31,11 @@ Add your content here.  Format your content with:
      * Basic build with no specific Android improvements
 
 *V 0.1.2:*
+  * Basic logging
+     * Initialisation
+     * Video card capabilities
+
+*V 0.1.3:*
   * Fix the remaining issues
      * No player movement with 2 keys pressed (ID: 1)
      * The gamestate switching doesn't work correct (ID: 2)
@@ -39,7 +44,6 @@ Add your content here.  Format your content with:
 = V 0.2.x =
 
 *V 0.2:*
-  * Implement basic logging
   * Implement player movement
   * Place assets (levels/other) in jar file (assets folder)
   * Define level format
