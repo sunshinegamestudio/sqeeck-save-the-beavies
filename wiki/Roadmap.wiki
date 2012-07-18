@@ -34,6 +34,7 @@ Add your content here.  Format your content with:
   * Fix the remaining issues
      * No player movement with 2 keys pressed (ID: 1)
      * The gamestate switching doesn't work correct (ID: 2)
+     * The CharacterControls don't collide (ID: 4)
 
 = V 0.2.x =
 
