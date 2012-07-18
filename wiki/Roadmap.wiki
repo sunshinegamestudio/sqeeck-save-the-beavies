@@ -59,7 +59,7 @@ Add your content here.  Format your content with:
 *V 0.3:*
   * Create simple enemy (NPC)
   * Spawn player/enemy on map points
-  * React on finish point
+  * React on finish point (finish LevelExitControl)
 
 = V 0.4.x =
 
