@@ -34,14 +34,16 @@ Add your content here.  Format your content with:
   * Basic logging
      * Initialisation
      * Video card capabilities
-  * Basic Android support
-     * Basic build with no specific Android improvements (fix issues with starting)
 
 *V 0.1.3:*
   * Fix the remaining issues
      * No player movement with 2 keys pressed (ID: 1)
      * The gamestate switching doesn't work correct (ID: 2)
      * The CharacterControls don't collide (ID: 4)
+
+*V 0.1.4:*
+  * Basic Android support
+     * Basic build with no specific Android improvements (fix issues with starting)
 
 = V 0.2.x =
 
