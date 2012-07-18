@@ -71,4 +71,13 @@ Add your content here.  Format your content with:
 *V 0.5:*
   * Swing with tail
 
+*V 0.6.0:*
+  * Basic menu's
+
+= V 0.6.x =
+
+*V 0.7.0:*
+  * Basic game logic
+
+
 The content of the releases are subject to change and can be changed without notice.
