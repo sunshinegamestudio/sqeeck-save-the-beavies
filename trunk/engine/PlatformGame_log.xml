@@ -2,8 +2,8 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2012-03-15T23:03:47</date>
-  <millis>1331849027687</millis>
+  <date>2012-07-19T23:14:32</date>
+  <millis>1342732472844</millis>
   <sequence>12</sequence>
   <logger>platformgame.core.PlatformGame</logger>
   <level>SEVERE</level>
@@ -11,5 +11,16 @@
   <method>initialize</method>
   <thread>11</thread>
   <message>Start initialization</message>
+</record>
+<record>
+  <date>2012-07-19T23:14:32</date>
+  <millis>1342732472973</millis>
+  <sequence>22</sequence>
+  <logger>platformgame.core.PlatformGame</logger>
+  <level>SEVERE</level>
+  <class>platformgame.core.PlatformGame</class>
+  <method>initialize</method>
+  <thread>11</thread>
+  <message>Renderer capabilities {0}: [FrameBuffer, FrameBufferMRT, FrameBufferMultisample, TextureMultisample, OpenGL20, OpenGL21, OpenGL30, OpenGL31, OpenGL32, ARBprogram, GLSL100, GLSL110, GLSL120, GLSL130, GLSL140, GLSL150, VertexTextureFetch, TextureArray, TextureBuffer, FloatTexture, FloatColorBuffer, FloatDepthBuffer, PackedFloatTexture, SharedExponentTexture, PackedFloatColorBuffer, TextureCompressionLATC, NonPowerOfTwoTextures, MeshInstancing, VertexBufferArray, PackedDepthStencilBuffer]</message>
 </record>
 </log>

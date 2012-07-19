@@ -102,9 +102,6 @@ public class PlatformGame extends Application {
             return;
         }
 
-        //Collection<Caps> caps = renderer.getCaps();
-        //getLogger().log(Level.SEVERE, "Caps: {0}" + caps.toString());
-
         super.start();
     }
 	
@@ -114,6 +111,10 @@ public class PlatformGame extends Application {
             
                 // initialize the standard environment first
 		super.initialize();
+
+                // Get renderer capabilities
+                Collection<Caps> caps = renderer.getCaps();
+                getLogger().log(Level.SEVERE, "Renderer capabilities {0}: " + caps.toString());
 
 		// Create the States
                 bulletAppState = new BulletAppState();
