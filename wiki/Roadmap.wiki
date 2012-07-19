@@ -37,7 +37,7 @@ Add your content here.  Format your content with:
      * Basic build with no specific Android improvements
 
 *V 0.2.2:*
-  * Basic logging (done)
+  * Basic logging _(done)_
      * Initialisation
      * Video card capabilities
   * Fix the remaining issues
