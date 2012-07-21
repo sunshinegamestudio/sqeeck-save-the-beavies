@@ -32,12 +32,12 @@ import com.jme3.renderer.ViewPort;
 import com.jme3.system.AppSettings;
 import com.jme3.system.JmeSystem;
 import com.jme3.system.Timer;
+
 import java.util.Collection;
 import java.util.logging.FileHandler;
-
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import platformgame.appstates.MainMenuState;
 import platformgame.appstates.InGameMenuState;
 import platformgame.appstates.GameState;
