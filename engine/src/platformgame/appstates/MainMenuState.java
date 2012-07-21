@@ -36,6 +36,8 @@ import com.jme3.scene.Spatial.CullHint;
 import de.lessvoid.nifty.Nifty;
 import de.lessvoid.nifty.screen.*;
 
+import java.util.logging.Level;
+
 import platformgame.core.PlatformGame;
 
 public class MainMenuState extends AbstractAppState implements ActionListener{
@@ -53,6 +55,8 @@ public class MainMenuState extends AbstractAppState implements ActionListener{
     
     public MainMenuState(PlatformGame game) {
     	this.game = game;
+
+        this.game.getLogger().log(Level.SEVERE, "MainMenuState created.");
     }
     
     public void onAction(String name, boolean value, float tpf) {
@@ -135,6 +139,8 @@ public class MainMenuState extends AbstractAppState implements ActionListener{
         
         game.getViewPort().attachScene(rootNode);
         game.getGUIViewPort().attachScene(guiNode);
+
+        this.game.getLogger().log(Level.SEVERE, "MainMenuState attached.");
     }
 
     @Override
@@ -149,6 +155,8 @@ public class MainMenuState extends AbstractAppState implements ActionListener{
     	
         game.getViewPort().detachScene(rootNode);
         game.getGUIViewPort().detachScene(guiNode);
+
+        this.game.getLogger().log(Level.SEVERE, "MainMenuState detached.");
     }
 
     @Override
