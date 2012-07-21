@@ -69,7 +69,7 @@ Add your content here.  Format your content with:
 *V 0.4:*
   * Create simple enemy (NPC)
   * Spawn player/enemy on map points
-  * React on finish point (finish LevelExitControl)
+  * React on finish point (finish LevelExitControl -> see papers)
 
 = V 0.5.x =
 
