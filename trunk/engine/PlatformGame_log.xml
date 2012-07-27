@@ -2,8 +2,8 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2012-07-21T23:35:29</date>
-  <millis>1342906529906</millis>
+  <date>2012-07-27T23:00:40</date>
+  <millis>1343422840588</millis>
   <sequence>12</sequence>
   <logger>platformgame.core.PlatformGame</logger>
   <level>SEVERE</level>
@@ -13,19 +13,19 @@
   <message>Start initialization</message>
 </record>
 <record>
-  <date>2012-07-21T23:35:30</date>
-  <millis>1342906530045</millis>
+  <date>2012-07-27T23:00:40</date>
+  <millis>1343422840831</millis>
   <sequence>22</sequence>
   <logger>platformgame.core.PlatformGame</logger>
   <level>SEVERE</level>
   <class>platformgame.core.PlatformGame</class>
   <method>initialize</method>
   <thread>11</thread>
-  <message>Renderer capabilities {0}: [FrameBuffer, FrameBufferMRT, FrameBufferMultisample, TextureMultisample, OpenGL20, OpenGL21, OpenGL30, OpenGL31, OpenGL32, ARBprogram, GLSL100, GLSL110, GLSL120, GLSL130, GLSL140, GLSL150, VertexTextureFetch, TextureArray, TextureBuffer, FloatTexture, FloatColorBuffer, FloatDepthBuffer, PackedFloatTexture, SharedExponentTexture, PackedFloatColorBuffer, TextureCompressionLATC, NonPowerOfTwoTextures, MeshInstancing, VertexBufferArray, PackedDepthStencilBuffer]</message>
+  <message>Renderer capabilities {0}: [FrameBuffer, FrameBufferMRT, FrameBufferMultisample, TextureMultisample, OpenGL20, OpenGL21, OpenGL30, OpenGL31, OpenGL32, ARBprogram, GLSL100, GLSL110, GLSL120, GLSL130, GLSL140, GLSL150, VertexTextureFetch, TextureArray, TextureBuffer, FloatTexture, FloatColorBuffer, FloatDepthBuffer, PackedFloatTexture, SharedExponentTexture, PackedFloatColorBuffer, TextureCompressionLATC, NonPowerOfTwoTextures, MeshInstancing, VertexBufferArray, Multisample, PackedDepthStencilBuffer]</message>
 </record>
 <record>
-  <date>2012-07-21T23:35:30</date>
-  <millis>1342906530058</millis>
+  <date>2012-07-27T23:00:40</date>
+  <millis>1343422840843</millis>
   <sequence>23</sequence>
   <logger>platformgame.core.PlatformGame</logger>
   <level>SEVERE</level>
@@ -35,8 +35,8 @@
   <message>MainMenuState created.</message>
 </record>
 <record>
-  <date>2012-07-21T23:35:30</date>
-  <millis>1342906530059</millis>
+  <date>2012-07-27T23:00:40</date>
+  <millis>1343422840844</millis>
   <sequence>24</sequence>
   <logger>platformgame.core.PlatformGame</logger>
   <level>SEVERE</level>
@@ -46,8 +46,8 @@
   <message>GameState created.</message>
 </record>
 <record>
-  <date>2012-07-21T23:35:30</date>
-  <millis>1342906530060</millis>
+  <date>2012-07-27T23:00:40</date>
+  <millis>1343422840871</millis>
   <sequence>25</sequence>
   <logger>platformgame.core.PlatformGame</logger>
   <level>SEVERE</level>
@@ -57,8 +57,8 @@
   <message>InGameMenuState created.</message>
 </record>
 <record>
-  <date>2012-07-21T23:35:30</date>
-  <millis>1342906530165</millis>
+  <date>2012-07-27T23:00:40</date>
+  <millis>1343422840989</millis>
   <sequence>26</sequence>
   <logger>platformgame.core.PlatformGame</logger>
   <level>SEVERE</level>
@@ -68,9 +68,9 @@
   <message>MainMenuState attached.</message>
 </record>
 <record>
-  <date>2012-07-21T23:35:33</date>
-  <millis>1342906533178</millis>
-  <sequence>182</sequence>
+  <date>2012-07-27T23:00:43</date>
+  <millis>1343422843855</millis>
+  <sequence>136</sequence>
   <logger>platformgame.core.PlatformGame</logger>
   <level>SEVERE</level>
   <class>platformgame.appstates.MainMenuState</class>
