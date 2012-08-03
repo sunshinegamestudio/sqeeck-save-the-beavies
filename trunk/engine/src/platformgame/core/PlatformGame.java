@@ -80,6 +80,7 @@ public class PlatformGame extends Application {
     @Override
     public void start(){
         logger = Logger.getLogger(PlatformGame.class.getName());
+        /*
         try {
             fh = new FileHandler("PlatformGame_log.xml");
         } catch (IOException ex) {
@@ -87,9 +88,11 @@ public class PlatformGame extends Application {
         } catch (SecurityException ex) {
             Logger.getLogger(PlatformGame.class.getName()).log(Level.SEVERE, null, ex);
         }
+         * Temperary disabled filehandler for readonly filesystem on Android.
+         */
         logger.setLevel(Level.ALL);
 
-        getLogger().addHandler(fh);
+        // getLogger().addHandler(fh);
         
         // set some default settings in-case
         // settings dialog is not shown
