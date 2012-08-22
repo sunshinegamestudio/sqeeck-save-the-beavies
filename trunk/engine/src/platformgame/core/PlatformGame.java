@@ -90,7 +90,8 @@ public class PlatformGame extends Application {
         }
          * Temperary disabled filehandler for readonly filesystem on Android.
          */
-        logger.setLevel(Level.ALL);
+        //logger.setLevel(Level.ALL);
+        logger.setLevel(Level.SEVERE);
 
         // getLogger().addHandler(fh);
         
