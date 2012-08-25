@@ -47,8 +47,8 @@ public class Terrain extends Entity {
         terrain.updateGeometricState();
 
         //Material mat3 = new Material(assetManager, "Common/MatDefs/Misc/WireColor.j3md");
-        Material mat3 = new Material(assetManager, "Common/MatDefs/Misc/Unshaded.j3md");
-        mat3.setColor("m_Color", ColorRGBA.Red);
+        //Material mat3 = new Material(assetManager, "Common/MatDefs/Misc/Unshaded.j3md");
+        //mat3.setColor("m_Color", ColorRGBA.Red);
         //terrain.attachDebugShape(mat3);
 
 
