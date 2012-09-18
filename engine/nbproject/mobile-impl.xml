@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--mobile-impl.xml v0.17-->
+<!--mobile-impl.xml v0.18-->
 <project name="mobile-impl" basedir="..">
     <condition property="android-adb-name" value="${file.separator}platform-tools${file.separator}adb.exe" else="${file.separator}platform-tools${file.separator}adb">
         <os family="windows" />
@@ -7,25 +7,25 @@
     
     <target name="run-android" depends="-flag-no-android, jar, -test-android-enabled, -copy-android-libs" if="is.android.enabled">
         <echo>Building debug android application version.</echo>
-        <ant dir="mobile" target="debug"/>
+        <ant dir="mobile" target="debug" inheritall="false"/>
         <antcall target="-start-android-device"/>
-        <ant dir="mobile" target="installd"/>
+        <ant dir="mobile" target="installd" inheritall="false"/>
         <antcall target="-run-android-device"/>
     </target>
     
     <target name="clean-android">
-        <ant dir="mobile" target="clean"/>
+        <ant dir="mobile" target="clean" inheritall="false"/>
     </target>
     
     <target name="-mobile-deployment" depends="-test-android-enabled, -copy-android-libs" if="is.android.enabled" unless="no.android.build">
-        <ant dir="mobile" target="release"/>
+        <ant dir="mobile" target="release" inheritall="false"/>
         <copy todir="dist" verbose="false" flatten="true">
             <fileset dir="mobile/bin/">
                 <include name="**/*.apk"/>
             </fileset>
         </copy>
     </target>
-    
+
     <target name="-copy-android-libs" if="is.android.enabled">
         <echo>Copying application libraries to android project.</echo>
         <delete dir="mobile/libs" failonerror="false"/>
