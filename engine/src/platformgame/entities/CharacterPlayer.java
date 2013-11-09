@@ -38,6 +38,7 @@ import com.jme3.bullet.collision.shapes.BoxCollisionShape;
 import com.jme3.bullet.collision.shapes.CapsuleCollisionShape;
 import com.jme3.bullet.collision.shapes.SphereCollisionShape;
 import com.jme3.bullet.control.CharacterControl;
+import com.jme3.bullet.control.BetterCharacterControl;
 import com.jme3.bullet.control.RigidBodyControl;
 //import com.jme3.bullet.nodes.PhysicsNode;
 import com.jme3.bullet.util.CollisionShapeFactory;
@@ -94,7 +95,8 @@ static final Quaternion ROTATE_LEFT = new Quaternion().fromAngleAxis(-FastMath.H
 
     //private Spatial spatial;
     private Node spatial;
-    private CharacterControl characterControl;
+    // private CharacterControl characterControl;
+    private BetterCharacterControl characterControl;
     private CharacterPlayerControl characterPlayerControl;
     private RigidBodyControl rigidBodyControl;
     
@@ -118,7 +120,8 @@ static final Quaternion ROTATE_LEFT = new Quaternion().fromAngleAxis(-FastMath.H
         this.cam = cam;
 
         CapsuleCollisionShape capsule = new CapsuleCollisionShape(1.5f, 2f);
-        characterControl = new CharacterControl(capsule, 0.01f);
+        // characterControl = new CharacterControl(capsule, 0.01f);
+        characterControl = new BetterCharacterControl(1.5f, 2f, 0.01f);
         //characterPlayerControl = new CharacterPlayerControl(getPhysicsSpace());
         //characterControl.setCollisionGroup(2);
         rigidBodyControl = new RigidBodyControl(capsule, 0.01f);
@@ -133,7 +136,7 @@ static final Quaternion ROTATE_LEFT = new Quaternion().fromAngleAxis(-FastMath.H
         spatial.addControl(characterControl);
         //spatial.addControl(characterPlayerControl);
         spatial.addControl(rigidBodyControl);
-        characterControl.setPhysicsLocation(new Vector3f(10, 4, -10));
+        // characterControl.setPhysicsLocation(new Vector3f(10, 4, -10));
         //characterControl.attachDebugShape(assetManager);
         getParent().attachChild(spatial);
         getPhysicsSpace().add(characterControl);
@@ -148,7 +151,7 @@ static final Quaternion ROTATE_LEFT = new Quaternion().fromAngleAxis(-FastMath.H
         return spatial;
     }
 
-    public CharacterControl getControl()   {
+    public BetterCharacterControl getControl()   {
         return characterControl;
     }
 
