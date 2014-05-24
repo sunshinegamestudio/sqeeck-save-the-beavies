@@ -37,6 +37,7 @@ import com.jme3.bullet.collision.PhysicsCollisionObject;
 import com.jme3.bullet.collision.shapes.BoxCollisionShape;
 import com.jme3.bullet.collision.shapes.CapsuleCollisionShape;
 import com.jme3.bullet.collision.shapes.SphereCollisionShape;
+import com.jme3.bullet.control.BetterCharacterControl;
 import com.jme3.bullet.control.CharacterControl;
 import com.jme3.bullet.control.RigidBodyControl;
 //import com.jme3.bullet.nodes.PhysicsNode;
@@ -87,8 +88,9 @@ import platformgame.entities.CharacterPlayer;
 public class SimpleEnemy extends Entity  {
     private CharacterPlayer player;
     private Node spatial;
-    private CharacterControl characterControl;
-    private RigidBodyControl rigidBodyControl;
+    // private CharacterControl characterControl;
+    private BetterCharacterControl characterControl;
+    // private RigidBodyControl rigidBodyControl;
 
     private Vector3f walkDirection = new Vector3f(Vector3f.ZERO);
     private Vector3f viewDirection = new Vector3f(Vector3f.UNIT_Z);
@@ -101,24 +103,25 @@ public class SimpleEnemy extends Entity  {
         this.player = player;
 
         CapsuleCollisionShape capsule = new CapsuleCollisionShape(1.5f, 2f);
-        characterControl = new CharacterControl(capsule, 0.01f);
+        // characterControl = new CharacterControl(capsule, 0.01f);
+        characterControl = new BetterCharacterControl(1.5f, 2f, 0.01f);
         //characterControl.setCollisionGroup(2);
-        rigidBodyControl = new RigidBodyControl(capsule, 0.01f);
-        rigidBodyControl.setKinematic(true);
-        rigidBodyControl.setCollisionGroup(PhysicsCollisionObject.COLLISION_GROUP_02);
-        rigidBodyControl.addCollideWithGroup(PhysicsCollisionObject.COLLISION_GROUP_02);
-        rigidBodyControl.removeCollideWithGroup(PhysicsCollisionObject.COLLISION_GROUP_01);
+        // rigidBodyControl = new RigidBodyControl(capsule, 0.01f);
+        // rigidBodyControl.setKinematic(true);
+        // rigidBodyControl.setCollisionGroup(PhysicsCollisionObject.COLLISION_GROUP_02);
+        // rigidBodyControl.addCollideWithGroup(PhysicsCollisionObject.COLLISION_GROUP_02);
+        // rigidBodyControl.removeCollideWithGroup(PhysicsCollisionObject.COLLISION_GROUP_01);
 
         //model = (Node) assetManager.loadModel("Models/Oto/Oto.mesh.xml");
         spatial = (Node) assetManager.loadModel("Models/simple_enemy_1/simple_enemy_1.mesh.j3o");
         spatial.setLocalScale(0.5f);
         spatial.addControl(characterControl);
-        spatial.addControl(rigidBodyControl);
-        characterControl.setPhysicsLocation(new Vector3f(10, 4, -14));
+        // spatial.addControl(rigidBodyControl);
+        // characterControl.setPhysicsLocation(new Vector3f(10, 4, -14));
         //characterControl.attachDebugShape(assetManager);
         getParent().attachChild(spatial);
         getPhysicsSpace().add(characterControl);
-        getPhysicsSpace().add(rigidBodyControl);
+        // getPhysicsSpace().add(rigidBodyControl);
     }
 
     public Node getNode()   {
