@@ -129,6 +129,7 @@ public class SimpleEnemy extends Entity  {
     }
 
     public void update(float tpf)    {
+        /*
         walkDirection.set(Vector3f.ZERO);
 
         if(player.getControl().getPhysicsLocation().x > characterControl.getPhysicsLocation().x)  {
@@ -150,6 +151,7 @@ public class SimpleEnemy extends Entity  {
         }
 
         characterControl.setWalkDirection(walkDirection);
+        */
 
         //characterControl.setWalkDirection(player.getControl().getPhysicsLocation());
         //characterControl.setWalkDirection(player.getControl().getPhysicsLocation());

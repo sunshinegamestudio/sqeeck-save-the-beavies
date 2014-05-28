@@ -29,6 +29,7 @@ import com.jme3.math.Vector3f;
 import com.jme3.renderer.Caps;
 import com.jme3.renderer.RenderManager;
 import com.jme3.renderer.ViewPort;
+import com.jme3.scene.Spatial;
 import com.jme3.system.AppSettings;
 import com.jme3.system.JmeSystem;
 import com.jme3.system.Timer;
@@ -193,6 +194,10 @@ public class PlatformGame extends Application {
 	
 	public void loadGame() {
                 this.enqueue(new ChangeStateTask(ms,te,viewPort,stateManager));
+	}
+	
+	public Spatial getPlayer() {
+                return stateManager.getState(GameState.class).getPlayer();
 	}
 	
 	

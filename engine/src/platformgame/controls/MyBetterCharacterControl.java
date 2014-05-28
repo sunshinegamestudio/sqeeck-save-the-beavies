@@ -17,12 +17,15 @@ import com.jme3.math.Vector3f;
  *
  * @author Sunshine GameStudio
  */
-public class PlayerCharacterControl extends MyBetterCharacterControl  {
+public class MyBetterCharacterControl extends BetterCharacterControl  {
     private PhysicsSpace physicsSpace;
     
-    public PlayerCharacterControl(PhysicsSpace physicsSpace)    {
-        super(physicsSpace);
+    public MyBetterCharacterControl(PhysicsSpace physicsSpace)    {
         this.physicsSpace = physicsSpace;
 
+    }
+
+    public Vector3f getLocation()   {
+        return super.location;
     }
 }
