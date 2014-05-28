@@ -39,6 +39,7 @@ import com.jme3.renderer.RenderManager;
 import com.jme3.renderer.queue.RenderQueue.Bucket;
 import com.jme3.scene.Geometry;
 import com.jme3.scene.Node;
+import com.jme3.scene.Spatial;
 import com.jme3.scene.Spatial.CullHint;
 import com.jme3.scene.shape.Box;
 import com.jme3.texture.Texture;
@@ -184,6 +185,10 @@ public class GameState extends AbstractAppState implements ActionListener {
         
     }
 
+    public Spatial getPlayer() {
+        return (Spatial)player.getNode();
+    }
+    
     @Override
     public void initialize(AppStateManager stateManager, Application app) {
         super.initialize(stateManager, app);
